@@ -10,19 +10,20 @@ body {
   background-color: hsl(30, 38%, 92%);
   max-width: 600px;
   margin: auto;
+  display: flex;
+min-height: 100vh;
+align-items: center;
 }
+
 
 main {
   display: flex;
-  align-items: center;
-  min-height: 100vh;
+  align-items: stretch;
+  /* min-height: 100vh; */
+      max-height: 450px;
 }
 
-.card {
-  display: flex;
-}
-
-.card div {
+main div {
   flex: 1;
 }
 
@@ -46,7 +47,7 @@ main {
 .button {
   outline: none;
   border: none;
-  height: 15%;
+    height: 12.34%;
   font-size: 1rem;
   font-weight: 700;
   background-color: hsl(158, 36%, 37%);
@@ -55,8 +56,7 @@ main {
   text-align: center;
   width: 100%;
   border-radius: 5px;
-  margin-top: 10%;
-  margin-bottom: 10%;
+    margin: 12% 0;
 }
 
 .button:hover {
@@ -70,8 +70,8 @@ i {
 
 /* Text mods */
 h1 {
-  font-size: 2rem;
-}
+font-size: 2rem;
+    line-height: 1;}
 
 h2 {
   font-size: 0.9rem;
@@ -79,6 +79,9 @@ h2 {
   font-weight: 100;
 }
 
+h2.Grey.Montserrat{
+padding-bottom: 1rem;
+}
 h3 {
   font-size: 0.75rem;
   letter-spacing: 0.3rem;
@@ -118,29 +121,38 @@ h3 {
 .Green.Price.Fraunces {
   padding-right: 1rem;
 }
-
+.Grey.Price.Montserrat.cross{
+  text-decoration: line-through;
+}
 @media (max-width: 640px) {
   body {
     padding: 1.6rem 1rem;
+        min-height: 0;
   }
 
+  main{
+        max-height: 0;
+
+  }
   .card {
     flex-direction: column;
   }
 
   .card-1 {
-    min-height: 250px;
+    min-height: 240px;
     background-image: url(./images/image-product-mobile.jpg);
     border-radius: 3% 3% 0% 0%;
+        width: 100%;
+
   }
 
   .card-2 {
     border-radius: 0 0 3% 3%;
-    padding: 1.5rem;
+    padding: 1.37rem 1.5rem;
   }
 
   .button {
-    height: 42px;
+    height: 48px;
     margin: 7% 0 0 0;
 
   }
@@ -149,6 +161,10 @@ h3 {
     margin: 0 0 0.7rem 0;
   }
 
+  h2{
+        font-size: 0.88rem;
+
+  }
   main {
     align-items: baseline;
   }
